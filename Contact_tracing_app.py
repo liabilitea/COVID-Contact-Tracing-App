@@ -5,7 +5,8 @@ class ContactTracingApp:
 
 # Add method to add the entries and its parameters
     def add_entry(self, name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone):
-    # Exception handling for numbers
+        if not phone.isdigit() or not contact_person_phone.isdigit():
+            raise ValueError("Phone number should only contain digits.")
 
         entry = f"Name: {name}\nPhone: {phone}\nEmail: {email}\nDate of Visit: {date}\nVaccination Status: {vaccination_status}\nTested for Covid-19 in the last 14 days: {covid_test}\nContact Person Name: {contact_person_name}\nContact Person Phone Number: {contact_person_phone}\n"
 # Write the entries in a file without overwriting other entries
