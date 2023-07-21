@@ -1,6 +1,7 @@
-# Main functions
-
 # Create class and initialize empty list to put future contact entries
+class ContactTracingApp:
+    def __init__(self):
+        self.entries = []
 
 # Add method to add the entries and its parameters
     # name, phone number, email, date, vaccination status, covid test, contact person name and number
