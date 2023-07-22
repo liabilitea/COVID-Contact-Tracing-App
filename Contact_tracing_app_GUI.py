@@ -129,7 +129,7 @@ class ContactTracingAppGUI:
 # Function to retrieve key term from gui
     def search_entry_gui(self):
         key_term = self.entry_search.get()
-        search_results = self.app.search_contact_entry(key_term)
+        search_results = self.app.search_entry(key_term)
 
     # Clear fields after search
         # Change state of text box to modify
