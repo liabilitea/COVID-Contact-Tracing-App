@@ -17,7 +17,10 @@ class ContactTracingAppGUI:
         self.app = ContactTracingApp()
 
     # Add background
-        
+        background = Image.open("C:/Users/Leigh/Desktop/Code/COVID-Contact-Tracing/COVID-Contact-Tracing-App/wallpa.png")
+        self.background_image = ImageTk.PhotoImage(background)
+        self.background_label = tk.Label(root, image=self.background_image)
+        self.background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 # Set elements per info
         # Name
