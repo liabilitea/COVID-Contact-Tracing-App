@@ -24,7 +24,7 @@ class ContactTracingAppGUI:
 
 # Set elements per info
         # Name
-        self.label_name = tk.Label(root, text = "Name:", bg="#FFADAD", fg="black")
+        self.label_name = tk.Label(root, text = "Name (FN-MI-LN):", bg="#FFADAD", fg="black")
         self.label_name.grid(row = 0, column = 0, padx = 5, pady = 5, sticky=tk.W)
         self.entry_name = tk.Entry(root, width = 60)
         self.entry_name.grid(row = 0, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
@@ -111,7 +111,10 @@ class ContactTracingAppGUI:
                 raise ValueError ("User phone number should contain only digits.")
             if not contact_person_phone.isdigit():
                 raise ValueError("Contact person phone number should contain only digits.")
-    
+
+            # Validate date format
+            date.strptime(date, "%Y-%m-%d")
+
         # Add the data collected from GUI to Apps's records
             self.app.add_entry(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)
             # Add message box for succesful entries
