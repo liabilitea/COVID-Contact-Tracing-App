@@ -112,8 +112,14 @@ class ContactTracingAppGUI:
             messagebox.showinfo("Success", "Entry added successfully!")
 
         # Clear fields after successful entry
-        
-
+            self.entry_name.delete(0, tk.END)
+            self.entry_phone.delete(0, tk.END)
+            self.entry_email.delete(0, tk.END)
+            self.entry_date.delete(0, tk.END)
+            self.entry_contact_person_name.delete(0, tk.END)
+            self.entry_contact_person_phone.delete(0, tk.END)
+            self.var_vaccination_status.set("")
+            self.var_covid_test.set("")
 
         # Add message box for erros
         except ValueError as err:
