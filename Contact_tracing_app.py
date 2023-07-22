@@ -23,7 +23,7 @@ class ContactTracingApp:
         
             for entry in entries:
                 entry_fields = entry.split("\n")
-                if any(key_term.lower() in entry_fields.lower() for field in entry_fields):
+                if any(key_term.lower() in field.lower() for field in entry_fields):
                     match.append(entry)
             
             return match
