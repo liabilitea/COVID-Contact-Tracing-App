@@ -126,6 +126,11 @@ class ContactTracingAppGUI:
         search_results = self.app.search_contact_entry(key_term)
 
     # Add display for search result
+        if search_results:
+            self.search_result_display.insert(tk.END, "\n\n".join(search_results))
+        else:
+            self.search_result_display.insert(tk.END, "No matching entry found.")
+
 
 if __name__ == "__main__":
     root = tk.Tk()  
