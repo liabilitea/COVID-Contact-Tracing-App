@@ -93,17 +93,32 @@ class ContactTracingAppGUI:
         contact_person_name = self. entry_contact_person_name.get()
         contact_person_phone = self. entry_contact_person_phone.get()
 
-        # Exception handling: phone numbers as digit only
-            # Add message box for erros
-
-        
+# Check if everything is filled out
+        if not all[(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)]:
+            messagebox.showerror("Error", "Please fill out all fields.")
+            return
     
-
+        # Exception handling: phone numbers as digit only
+        try:
+            if not phone.isdigit():
+                raise ValueError ("User phone number should contain only digits.")
+            if not contact_person_phone.isdigit():
+                raise ValueError("Contact person phone number should contain only digits.")
+    
+    
         # Add the data collected from GUI to Apps's records
 
-        self.app.add_entry(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)
-        
+            self.app.add_entry(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)
+            messagebox.showinfo("Success", "Entry added successfully!")
         # Add message box for succesful entries
+
+
+        # Add message box for erros
+        except ValueError as err:
+            messagebox.showerror("Error", str(err))
+        except Exception as e:
+            messagebox.showerror("Error", "An error occurred while adding the entry.")
+        
 
 # Function to retrieve key term from gui
     def search_entry_gui(self):
