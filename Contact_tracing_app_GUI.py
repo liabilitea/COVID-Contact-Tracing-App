@@ -105,7 +105,6 @@ class ContactTracingAppGUI:
             if not contact_person_phone.isdigit():
                 raise ValueError("Contact person phone number should contain only digits.")
     
-    
         # Add the data collected from GUI to Apps's records
             self.app.add_entry(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)
             # Add message box for succesful entries
@@ -127,7 +126,6 @@ class ContactTracingAppGUI:
         except Exception as e:
             messagebox.showerror("Error", "An error occurred while adding the entry.")
         
-
 # Function to retrieve key term from gui
     def search_entry_gui(self):
         key_term = self.entry_search.get()
@@ -135,13 +133,16 @@ class ContactTracingAppGUI:
 
     # Clear fields after search
         # Change state of text box to modify
+        self.search_result_display.config(state=tk.NORMAL)
+        self.search_result_display.delete("1.0", tk.END)
 
     # Add display for search result
         if search_results:
             self.search_result_display.insert(tk.END, "\n\n".join(search_results))
         else:
             self.search_result_display.insert(tk.END, "No matching entry found.")
-
+        # Disable it again after events
+        self.search_result_display.config(state=tk.DISABLED)
 
 if __name__ == "__main__":
     root = tk.Tk()  
