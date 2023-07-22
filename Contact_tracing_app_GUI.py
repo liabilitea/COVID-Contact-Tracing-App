@@ -39,6 +39,7 @@ class ContactTracingAppGUI:
 
         self.label_vaccination = tk.Label(root, text="Vaccination Status:", bg="#FFADAD", fg="black")
         self.label_vaccination.grid(row = 4, column = 0, padx = 5, pady = 5, sticky = tk.W)
+        self.var_vaccination_status = tk.StringVar()
         vaccination_options = ["Not Yet", "1st Dose", "Fully Vaccinated", "Boosted"]
         # Create radiobuttons for each option
         for i, option in enumerate(vaccination_options):
