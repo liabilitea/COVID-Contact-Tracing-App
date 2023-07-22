@@ -93,16 +93,24 @@ class ContactTracingAppGUI:
         contact_person_name = self. entry_contact_person_name.get()
         contact_person_phone = self. entry_contact_person_phone.get()
 
+        # Exception handling: phone numbers as digit only
+            # Add message box for erros
+
+        
+    
+
         # Add the data collected from GUI to Apps's records
 
         self.app.add_entry(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)
-
+        
+        # Add message box for succesful entries
 
 # Function to retrieve key term from gui
     def search_entry_gui(self):
         key_term = self.entry_search.get()
         search_results = self.app.search_contact_entry(key_term)
 
+    # Add display for search result
 
 if __name__ == "__main__":
     root = tk.Tk()  
