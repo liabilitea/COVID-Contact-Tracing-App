@@ -91,8 +91,13 @@ class ContactTracingAppGUI:
         vaccination_status = self.var_vaccination_status.get()
         covid_test = self.var_covid_test.get()
         contact_person_name = self. entry_contact_person_name.get()
-        contact_person_number = self. entry_contact_person_phone.get()
-    
+        contact_person_phone = self. entry_contact_person_phone.get()
+
+        # Add the data collected from GUI to Apps's records
+
+        self.app.add_entry(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)
+
+
 # Function to retrieve key term from gui
     def search_entry_gui(self):
         key_term = self.entry_search.get()
