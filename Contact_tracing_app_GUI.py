@@ -47,13 +47,13 @@ class ContactTracingAppGUI:
             rb_vaccine.grid(row = 4, column = i+1, padx = 2, pady = 2)
             
         
-        self.label_tested_covid = tk.Label(root, text="Have you been tested for Covid-19 in the last 14 days?", bg="#FFADAD", fg="black")
-        self.label_tested_covid.grid(row = 5, column = 0, padx = 5, pady = 5, sticky = tk.W)
-        self.var_tested_covid = tk.StringVar()
+        self.label_covid_test = tk.Label(root, text="Have you been tested for Covid-19 in the last 14 days?", bg="#FFADAD", fg="black")
+        self.label_covid_test.grid(row = 5, column = 0, padx = 5, pady = 5, sticky = tk.W)
+        self.var_covid_test = tk.StringVar()
         test_options = ["No", "Yes-Positive", "Yes-Negative", "Yes-Pending"]
         # Create radiobuttons for each option
         for i, option in enumerate(test_options):
-            rb_test = tk.Radiobutton(root, text = option, variable = self.var_tested_covid, value = option)
+            rb_test = tk.Radiobutton(root, text = option, variable = self.var_covid_test, value = option)
             rb_test.grid(row = 5, column = i+1, padx = 2, pady = 2)   
     
         self.label_contact_person_name = tk.Label(root, text="Contact Person Name:")
@@ -85,8 +85,8 @@ class ContactTracingAppGUI:
         phone = self. entry_phone.get()
         email = self. entry_email.get()
         date = self. entry_date.get()
-        vaccination_status = self. entry_.get()
-        covid_test = self. entry_.get()
+        vaccination_status = self.var_vaccination_status.get()
+        covid_test = self.var_covid_test.get()
         contact_person_name = self. entry_contact_person_name.get()
         contact_person_number = self. entry_contact_person_phone.get()
     
