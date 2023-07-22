@@ -1,9 +1,9 @@
-# GUI
-
 # Import
     # tk
+import tkinter as tk
+from tkinter import messagebox
     # contact tracing app
-
+from Contact_tracing_app import ContactTracingApp
 
 # Create class
     # title
