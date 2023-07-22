@@ -19,8 +19,8 @@ class ContactTracingAppGUI:
     # Info
         self.label_name = tk.Label(root, text = "Name:")
         self.label_name.grid(row = 0, column = 0, padx = 5, pady = 5, sticky=tk.W)
-        
-    
+        self.entry_name = tk.Entry(root, width = 60)
+        self.entry_name.grid(row = 0, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
     # Buttons for search add and checklist
 
 # Function to retrieve data from gui
