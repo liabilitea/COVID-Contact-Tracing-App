@@ -112,9 +112,6 @@ class ContactTracingAppGUI:
             if not contact_person_phone.isdigit():
                 raise ValueError("Contact person phone number should contain only digits.")
 
-            # Validate date format
-            date.strptime(date, "%Y-%m-%d")
-
         # Add the data collected from GUI to Apps's records
             self.app.add_entry(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)
             # Add message box for succesful entries
@@ -131,8 +128,8 @@ class ContactTracingAppGUI:
             self.var_covid_test.set("")
 
         # Add message box for errors
-        except ValueError:
-            messagebox.showerror("Error", "Date format should be YYYY-MM-DD.")
+        except ValueError as err:
+            messagebox.showerror("Error", str(err))
 
         except Exception as e:
             messagebox.showerror("Error", "An error occurred while adding the entry.")
