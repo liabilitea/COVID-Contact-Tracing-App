@@ -24,22 +24,22 @@ class ContactTracingAppGUI:
 
 # Set elements per info
         # Name
-        self.label_name = tk.Label(root, text = "Name:")
+        self.label_name = tk.Label(root, text = "Name:", bg="#FFADAD", fg="black")
         self.label_name.grid(row = 0, column = 0, padx = 5, pady = 5, sticky=tk.W)
         self.entry_name = tk.Entry(root, width = 60)
         self.entry_name.grid(row = 0, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
         # Phone
-        self.label_phone = tk.Label(root, text = "Phone Number:")
+        self.label_phone = tk.Label(root, text = "Phone Number:", bg="#FFADAD", fg="black")
         self.label_phone.grid(row = 1, column = 0, padx = 5, pady = 5, sticky = tk.W)
         self.entry_phone = tk.Entry(root, width = 60)
         self.entry_phone.grid(row = 1, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
         # Email
-        self.label_email = tk.Label(root, text = "Email:")
+        self.label_email = tk.Label(root, text = "Email:", bg="#FFADAD", fg="black")
         self.label_email.grid(row = 2, column = 0, padx = 5, pady = 5, sticky = tk.W)
         self.entry_email = tk.Entry(root, width = 60)
         self.entry_email.grid(row = 2, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
         # Date
-        self.label_date = tk.Label(root, text = "Date (YYYY-MM-DD):")
+        self.label_date = tk.Label(root, text = "Date (YYYY-MM-DD):", bg="#FFADAD", fg="black")
         self.label_date.grid(row = 3, column = 0, padx = 5, pady = 5, sticky = tk.W)
         self.entry_date = tk.Entry(root, width = 60)
         self.entry_date.grid(row = 3, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
@@ -50,7 +50,7 @@ class ContactTracingAppGUI:
         vaccination_options = ["Not Yet", "1st Dose", "Fully Vaccinated", "Boosted"]
         # Create radiobuttons for each option
         for i, option in enumerate(vaccination_options):
-            rb_vaccine = tk.Radiobutton(root, text = option, variable = self.var_vaccination_status, value = option)
+            rb_vaccine = tk.Radiobutton(root, text = option, variable = self.var_vaccination_status, value = option, bg="#BEB4C5", fg="black")
             rb_vaccine.grid(row = 4, column = i+1, padx = 2, pady = 2) 
         # COVID Test Status        
         self.label_covid_test = tk.Label(root, text="Have you been tested for Covid-19 in the last 14 days?", bg="#FFADAD", fg="black")
@@ -59,30 +59,30 @@ class ContactTracingAppGUI:
         test_options = ["No", "Yes-Positive", "Yes-Negative", "Yes-Pending"]
         # Create radiobuttons for each option
         for i, option in enumerate(test_options):
-            rb_test = tk.Radiobutton(root, text = option, variable = self.var_covid_test, value = option)
+            rb_test = tk.Radiobutton(root, text = option, variable = self.var_covid_test, value = option, bg="#F7CE76", fg="black")
             rb_test.grid(row = 5, column = i+1, padx = 2, pady = 2)   
         # Contact Person Name    
-        self.label_contact_person_name = tk.Label(root, text="Contact Person Name:")
+        self.label_contact_person_name = tk.Label(root, text="Contact Person Name:", bg="#E4CEE0", fg="black")
         self.label_contact_person_name.grid(row = 6, column = 0, padx = 5, pady = 5, sticky = tk.W)
         self.entry_contact_person_name = tk.Entry(root, width = 60)
         self.entry_contact_person_name.grid(row = 6, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
         # Contact Person Phone  
-        self.label_contact_person_phone = tk.Label(root, text="Contact Person Phone Number:")
+        self.label_contact_person_phone = tk.Label(root, text="Contact Person Phone Number:", bg="#E4CEE0", fg="black")
         self.label_contact_person_phone.grid(row=7, column = 0, padx = 5, pady = 5, sticky = tk.W)
         self.entry_contact_person_phone = tk.Entry(root, width = 60)
         self.entry_contact_person_phone.grid(row=7, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
 
         # Buttons for add method        
-        self.add_entry_button = tk.Button(root, text = "Add Entry", command = self.add_entry_gui)
+        self.add_entry_button = tk.Button(root, text = "Add Entry", command = self.add_entry_gui, bg="#C1E1C1", fg="black")
         self.add_entry_button.grid(row = 8, column = 0, padx = 5, pady = 5, columnspan = 5, sticky = tk.W+tk.E)
 
         # Label and entry field for search methid
-        self.label_search_entry = tk.Label(root, text = "Search Entry:")
+        self.label_search_entry = tk.Label(root, text = "Search Entry:", bg="#A8D1D1", fg="black")
         self.label_search_entry.grid(row = 9, column = 0, padx = 5, pady = 5, sticky = tk.W)
         self.entry_search = tk.Entry(root, width=40)
         self.entry_search.grid(row = 9, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W+tk.E)
         # Buttons for search method 
-        self.search_entry_button = tk.Button(root, text = "Search", command = self.search_entry_gui)
+        self.search_entry_button = tk.Button(root, text = "Search", command = self.search_entry_gui, bg="lightblue", fg="black")
         self.search_entry_button.grid(row = 10, column = 0, padx = 5, pady = 5, columnspan = 5, sticky = tk.W+tk.E)
 
         #Display for search results
