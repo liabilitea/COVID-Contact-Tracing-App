@@ -19,9 +19,15 @@ class ContactTracingApp:
             with open("contact_tracing_data.txt", "r") as file:
         # read, split with single line 
                 entries = file.read().split("\n")
-        # iterate thru entries to see which match the key term
-            match = [entry for entry in entries if key_term in entry if key_term.lower() in entry.lower()]
+                match = []
+        
+            for entry in entries:
+                entry_fields = entry.split("\n")
+                if any(key_term.lower() in entry_fields.lower() for field in entry_fields):
+                    match.append(entry)
+            
             return match
         except FileNotFoundError:
             return None
+
         
