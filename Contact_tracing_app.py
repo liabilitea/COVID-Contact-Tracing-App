@@ -16,7 +16,7 @@ class ContactTracingApp:
 # Add method to search for matching existing entries
     def search_entry(self, key_term):
         try:
-            with open("contact_tracing_data.txt", "r") as file:
+            with open("c19_contact_tracing_data.txt", "r") as file:
         # read, split with single line 
                 entries = file.read().split("\n")
                 match = []
