@@ -17,9 +17,17 @@ class ContactTracingAppGUI:
 
 # Set elements per info
     # Info
-
+        self.label_name = tk.Label(root, text = "Name:")
+        self.label_name.grid(row = 0),
+    
+    
     # Buttons for search add and checklist
 
 # Function to retrieve data from gui
 
 # Function to retrieve key term from gui
+
+if __name__ == "__main__":
+    root = tk.Tk()  
+    app_gui = ContactTracingAppGUI(root)
+    root.mainloop()
