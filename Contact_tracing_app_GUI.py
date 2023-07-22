@@ -68,7 +68,7 @@ class ContactTracingAppGUI:
 
     # Buttons for search add and checklist
         
-        self.add_entry_button = tk.Button(root, text = "Add Entry")
+        self.add_entry_button = tk.Button(root, text = "Add Entry", command = self.add_entry_gui)
         self.add_entry_button.grid(row = 8, column = 0, padx = 5, pady = 5, columnspan = 5, sticky = tk.W+tk.E)
 
         self.label_search_entry = tk.Label(root, text = "Search Entry:")
@@ -76,7 +76,7 @@ class ContactTracingAppGUI:
         self.entry_search = tk.Entry(root, width=40)
         self.entry_search.grid(row = 9, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W+tk.E)
     
-        self.search_entry_button = tk.Button(root, text = "Search")
+        self.search_entry_button = tk.Button(root, text = "Search", command = self.search_entry_gui)
         self.search_entry_button.grid(row = 10, column = 0, padx = 5, pady = 5, columnspan = 5, sticky = tk.W+tk.E)
 
 # Function to retrieve data from gui
@@ -94,6 +94,8 @@ class ContactTracingAppGUI:
     def search_entry_gui(self):
         key_term = self.entry_search.get()
         search_results = self.app.search_contact_entry(key_term)
+
+
 if __name__ == "__main__":
     root = tk.Tk()  
     app_gui = ContactTracingAppGUI(root)
