@@ -79,9 +79,17 @@ class ContactTracingAppGUI:
         self.search_entry_button = tk.Button(root, text = "Search")
         self.search_entry_button.grid(row = 10, column = 0, padx = 5, pady = 5, columnspan = 5, sticky = tk.W+tk.E)
 
-
 # Function to retrieve data from gui
-
+    def add_entry_gui(self):
+        name = self. entry_name.get()
+        phone = self. entry_phone.get()
+        email = self. entry_email.get()
+        date = self. entry_date.get()
+        vaccination_status = self. entry_.get()
+        covid_test = self. entry_.get()
+        contact_person_name = self. entry_contact_person_name.get()
+        contact_person_number = self. entry_contact_person_phone.get()
+    
 # Function to retrieve key term from gui
 
 if __name__ == "__main__":
