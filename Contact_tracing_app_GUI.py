@@ -107,10 +107,12 @@ class ContactTracingAppGUI:
     
     
         # Add the data collected from GUI to Apps's records
-
             self.app.add_entry(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)
+            # Add message box for succesful entries
             messagebox.showinfo("Success", "Entry added successfully!")
-        # Add message box for succesful entries
+
+        # Clear fields after successful entry
+        
 
 
         # Add message box for erros
@@ -124,6 +126,9 @@ class ContactTracingAppGUI:
     def search_entry_gui(self):
         key_term = self.entry_search.get()
         search_results = self.app.search_contact_entry(key_term)
+
+    # Clear fields after search
+        # Change state of text box to modify
 
     # Add display for search result
         if search_results:
