@@ -45,14 +45,16 @@ class ContactTracingAppGUI:
         for i, option in enumerate(vaccination_options):
             rb_vaccine = tk.Radiobutton(root, text = option, variable = self.var_vaccination_status, value = option)
             rb_vaccine.grid(row = 4, column = i+1, padx = 2, pady = 2)
-            # Iterate to avoid code duplication
+            
         
         self.label_tested_covid = tk.Label(root, text="Have you been tested for Covid-19 in the last 14 days?", bg="#FFADAD", fg="black")
         self.label_tested_covid.grid(row = 5, column = 0, padx = 5, pady = 5, sticky = tk.W)
-        tested_covid_options = ["No", "Yes-Positive", "Yes-Negative", "Yes-Pending"]
-        
+        self.var_tested_covid = tk.StringVar()
+        test_options = ["No", "Yes-Positive", "Yes-Negative", "Yes-Pending"]
         # Create radiobuttons for each option
-            # Iterate to avoid code duplication
+        for i, option in enumerate(test_options):
+            rb_test = tk.Radiobutton(root, text = option, variable = self.var_tested_covid, value = option)
+            rb_test.grid(row = 5, column = i+1, padx = 2, pady = 2)   
     
         self.label_contact_person_name = tk.Label(root, text="Contact Person Name:")
         self.label_contact_person_name.grid(row = 6, column = 0, padx = 5, pady = 5, sticky = tk.W)
