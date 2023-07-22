@@ -70,6 +70,11 @@ class ContactTracingAppGUI:
         
         self.add_entry_button = tk.Button(root, text = "Add Entry")
         self.add_entry_button.grid(row = 8, column = 0, padx = 5, pady = 5, columnspan = 5, sticky = tk.W+tk.E)
+
+        self.label_search_entry = tk.Label(root, text = "Search Entry:")
+        self.label_search_entry.grid(row = 9, column = 0, padx = 5, pady = 5, sticky = tk.W)
+        self.entry_search = tk.Entry(root, width=40)
+        self.entry_search.grid(row = 9, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W+tk.E)
 # Function to retrieve data from gui
 
 # Function to retrieve key term from gui
