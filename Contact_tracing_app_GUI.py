@@ -132,6 +132,9 @@ class ContactTracingAppGUI:
 
         # Add message box for errors
         except ValueError as err:
+            if str(err) == "time data '{}' not match format '%Y-%m-%d'".format(date):
+                messagebox.showerror("Error", "Date format should be YYYY-MM-DD.")
+            else:
                 messagebox.showerror("Error", str(err))
         except Exception as e:
             messagebox.showerror("Error", "An error occurred while adding the entry.")
