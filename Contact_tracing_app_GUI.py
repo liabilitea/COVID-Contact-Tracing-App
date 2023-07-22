@@ -2,6 +2,7 @@
     # TK
 import tkinter as tk
 from tkinter import messagebox
+from PIL import ImageTk, Image
     # Contact Tracing App
 from Contact_tracing_app import ContactTracingApp
 
@@ -14,6 +15,9 @@ class ContactTracingAppGUI:
         root.geometry("700x500")
         self.root.resizable(False, False)
         self.app = ContactTracingApp()
+
+    # Add background
+        
 
 # Set elements per info
         # Name
