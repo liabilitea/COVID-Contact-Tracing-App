@@ -11,7 +11,7 @@ class ContactTracingAppGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("COVID Contact Tracing App")
-        root.geometry("700x500")
+        root.geometry("700x400")
         self.root.resizable(False, False)
         self.app = ContactTracingApp()
 
