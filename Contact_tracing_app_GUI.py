@@ -144,7 +144,3 @@ class ContactTracingAppGUI:
         # Disable it again after events
         self.search_result_display.config(state=tk.DISABLED)
 
-if __name__ == "__main__":
-    root = tk.Tk()  
-    app_gui = ContactTracingAppGUI(root)
-    root.mainloop()
