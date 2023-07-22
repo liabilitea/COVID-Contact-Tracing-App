@@ -37,8 +37,11 @@ class ContactTracingAppGUI:
         self.entry_date = tk.Entry(root, width=60)
         self.entry_date.grid(row = 3, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
 
-
+        self.label_vaccination = tk.Label(root, text="Vaccination Status:", bg="#FFADAD", fg="black")
+        self.label_vaccination.grid(row=4, column=0, padx=5, pady=5, sticky=tk.W)
     
+        self.label_tested_covid = tk.Label(root, text="Have you been tested for Covid-19 in the last 14 days?", bg="#FFADAD", fg="black")
+        self.label_tested_covid.grid(row=5, column=0, padx=5, pady=5, sticky=tk.W)
     
     
     # Buttons for search add and checklist
