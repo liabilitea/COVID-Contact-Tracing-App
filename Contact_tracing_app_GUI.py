@@ -91,10 +91,10 @@ class ContactTracingAppGUI:
 
 # Function to retrieve data from gui
     def add_entry_gui(self):
-        name = self. entry_name.get()
-        phone = self. entry_phone.get()
-        email = self. entry_email.get()
-        date = self. entry_date.get()
+        name = self.entry_name.get()
+        phone = self.entry_phone.get()
+        email = self.entry_email.get()
+        date = self.entry_date.get()
         vaccination_status = self.var_vaccination_status.get()
         covid_test = self.var_covid_test.get()
         contact_person_name = self. entry_contact_person_name.get()
@@ -132,11 +132,7 @@ class ContactTracingAppGUI:
 
         # Add message box for errors
         except ValueError as err:
-            if str(err) == "time data '{}' not match format '%Y-%m-%d'".format(date):
-                messagebox.showerror("Error", "Date format should be YYYY-MM-DD.")
-            else:
                 messagebox.showerror("Error", str(err))
-
         except Exception as e:
             messagebox.showerror("Error", "An error occurred while adding the entry.")
         
