@@ -12,7 +12,7 @@ class ContactTracingAppGUI:
         self.root = root
         self.root.title("COVID Contact Tracing App")
         root.geometry("700x500")
-        self.root.resize(False, False)
+        self.root.resizable(False, False)
         self.app = ContactTracingApp()
 
 # Set elements per info
