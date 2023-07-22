@@ -91,7 +91,9 @@ class ContactTracingAppGUI:
         contact_person_number = self. entry_contact_person_phone.get()
     
 # Function to retrieve key term from gui
-
+    def search_entry_gui(self):
+        key_term = self.entry_search.get()
+        search_results = self.app.search_contact_entry(key_term)
 if __name__ == "__main__":
     root = tk.Tk()  
     app_gui = ContactTracingAppGUI(root)
