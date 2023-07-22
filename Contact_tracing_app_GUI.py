@@ -40,11 +40,26 @@ class ContactTracingAppGUI:
         self.label_vaccination = tk.Label(root, text="Vaccination Status:", bg="#FFADAD", fg="black")
         self.label_vaccination.grid(row=4, column=0, padx=5, pady=5, sticky=tk.W)
         vaccination_options = ["Not Yet", "1st Dose", "Fully Vaccinated", "Boosted"]
-
+        # Create radiobuttons for each option
+            # Iterate to avoid code duplication
+        
         self.label_tested_covid = tk.Label(root, text="Have you been tested for Covid-19 in the last 14 days?", bg="#FFADAD", fg="black")
         self.label_tested_covid.grid(row=5, column=0, padx=5, pady=5, sticky=tk.W)
         tested_covid_options = ["No", "Yes-Positive", "Yes-Negative", "Yes-Pending"]
+        
+        # Create radiobuttons for each option
+            # Iterate to avoid code duplication
     
+        self.label_contact_person_name = tk.Label(root, text="Contact Person Name:")
+        self.label_contact_person_name.grid(row=6, column=0, padx=5, pady=5, sticky=tk.W)
+        self.entry_contact_person_name = tk.Entry(root, width=60)
+        self.entry_contact_person_name.grid(row=6, column=1, padx=5, pady=5, columnspan=4, sticky=tk.W)
+
+        self.label_contact_person_phone = tk.Label(root, text="Contact Person Phone Number:")
+        self.label_contact_person_phone.grid(row=7, column=0, padx=5, pady=5, sticky=tk.W)
+        self.entry_contact_person_phone = tk.Entry(root, width=60)
+        self.entry_contact_person_phone.grid(row=7, column=1, padx=5, pady=5, columnspan=4, sticky=tk.W)
+
     # Buttons for search add and checklist
 
 # Function to retrieve data from gui
