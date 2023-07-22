@@ -79,7 +79,7 @@ class ContactTracingAppGUI:
         self.search_entry_button = tk.Button(root, text = "Search", command = self.search_entry_gui)
         self.search_entry_button.grid(row = 10, column = 0, padx = 5, pady = 5, columnspan = 5, sticky = tk.W+tk.E)
 
-        self.search_result_display = tk.Text(root, height = 8, width = 60)
+        self.search_result_display = tk.Text(root, height = 8, width = 60, state = tk.DISABLED)
         self.search_result_display.grid(row = 11, column = 0, padx = 5, pady = 5, columnspan = 5)
 
 # Function to retrieve data from gui
