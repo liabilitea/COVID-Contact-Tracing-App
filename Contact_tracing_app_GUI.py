@@ -18,8 +18,8 @@ class ContactTracingAppGUI:
 # Set elements per info
     # Info
         self.label_name = tk.Label(root, text = "Name:")
-        self.label_name.grid(row = 0),
-    
+        self.label_name.grid(row = 0, column = 0, padx = 5, pady = 5, sticky=tk.W)
+        
     
     # Buttons for search add and checklist
 
