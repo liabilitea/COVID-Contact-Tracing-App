@@ -10,7 +10,7 @@ class ContactTracingApp:
 
         entry = f"Name: {name}\nPhone: {phone}\nEmail: {email}\nDate of Visit: {date}\nVaccination Status: {vaccination_status}\nTested for Covid-19 in the last 14 days: {covid_test}\nContact Person Name: {contact_person_name}\nContact Person Phone Number: {contact_person_phone}\n"
 # Write the entries in a file without overwriting other entries
-        with open("contact_tracing_data.txt", "a") as file:
+        with open("c19_contact_tracing_data.txt", "a") as file:
             file.write(entry)
 
 # Add method to search for matching existing entries
