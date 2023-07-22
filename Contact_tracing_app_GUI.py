@@ -130,9 +130,13 @@ class ContactTracingAppGUI:
             self.var_vaccination_status.set("")
             self.var_covid_test.set("")
 
-        # Add message box for erros
+        # Add message box for errors
         except ValueError as err:
-            messagebox.showerror("Error", str(err))
+            if str(err) == "time data '{}' not match format '%Y-%m-%d'".format(date):
+                messagebox.showerror("Error", "Date format should be YYYY-MM-DD.")
+            else:
+                messagebox.showerror("Error", str(err))
+
         except Exception as e:
             messagebox.showerror("Error", "An error occurred while adding the entry.")
         
