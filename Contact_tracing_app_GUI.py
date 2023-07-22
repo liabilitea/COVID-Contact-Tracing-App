@@ -21,6 +21,11 @@ class ContactTracingAppGUI:
         self.label_name.grid(row = 0, column = 0, padx = 5, pady = 5, sticky=tk.W)
         self.entry_name = tk.Entry(root, width = 60)
         self.entry_name.grid(row = 0, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
+
+        self.label_phone = tk.Label(root, text = "Phone Number:")
+        self.label_phone.grid(row = 1, column = 0, padx = 5, pady = 5, sticky = tk.W)
+        self.entry_phone = tk.Entry(root, width=60)
+        self.entry_phone.grid(row = 1, column = 1, padx = 5, pady = 5, columnspan = 4, sticky = tk.W)
     # Buttons for search add and checklist
 
 # Function to retrieve data from gui
