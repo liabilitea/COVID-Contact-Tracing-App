@@ -20,7 +20,7 @@ class ContactTracingApp:
         # read, split with single line 
                 entries = file.read().split("\n")
         # iterate thru entries to see which match the key term
-            match = [entry for entry in entries if key_term in entry]
+            match = [entry for entry in entries if key_term in entry if key_term.lower() in entry.lower()]
             return match
         except FileNotFoundError:
             return None
