@@ -94,7 +94,7 @@ class ContactTracingAppGUI:
         contact_person_phone = self. entry_contact_person_phone.get()
 
         # Check if everything is filled out
-        if not all[(name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)]:
+        if not all((name, phone, email, date, vaccination_status, covid_test, contact_person_name, contact_person_phone)):
             messagebox.showerror("Error", "Please fill out all fields.")
             return
     
